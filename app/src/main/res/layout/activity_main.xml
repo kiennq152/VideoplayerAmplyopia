@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <Chronometer
+        android:id="@+id/chrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <VideoView
+        android:id="@+id/simpleVideoView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/simpleVideoView1"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"/>
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+        android:text=">"
+        android:layout_below="@id/simpleVideoView1" />
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+        android:text="ㅍ"
+        android:layout_below="@id/simpleVideoView1"
+        android:layout_toRightOf="@id/btnPlay"/>
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+        android:text="ㅁ"
+        android:layout_below="@id/simpleVideoView1"
+        android:layout_toRightOf="@id/btnRestart"/>
+    <TextView
+        android:id="@+id/timeview"
+        android:text="00:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPlay"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/timeview2"
+        android:text="00:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/simpleVideoView2"
+        android:layout_centerHorizontal="true"/>
+
+    <VideoView
+        android:id="@+id/simpleVideoView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
