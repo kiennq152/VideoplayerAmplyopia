@@ -4,60 +4,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/pilot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"/>
     <Chronometer
         android:id="@+id/chrono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-    <VideoView
-        android:id="@+id/simpleVideoView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true" />
-    <FrameLayout
+<!--    <VideoView-->
+<!--        android:id="@+id/simpleVideoView1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true" />-->
+    <!--Widget for exoplayer view-->
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/idExoPlayerVIew"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/simpleVideoView1"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"/>
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/pilot"/>
     <Button
         android:id="@+id/btnPlay"
         android:layout_width="100px"
         android:layout_height="wrap_content"
         android:text=">"
-        android:layout_below="@id/simpleVideoView1" />
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/btnRestart"/>
     <Button
         android:id="@+id/btnRestart"
         android:layout_width="100px"
         android:layout_height="wrap_content"
         android:text="ㅍ"
-        android:layout_below="@id/simpleVideoView1"
-        android:layout_toRightOf="@id/btnPlay"/>
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
     <Button
         android:id="@+id/btnStop"
         android:layout_width="100px"
         android:layout_height="wrap_content"
         android:text="ㅁ"
-        android:layout_below="@id/simpleVideoView1"
-        android:layout_toRightOf="@id/btnRestart"/>
+        android:layout_toRightOf="@id/btnRestart"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
     <TextView
         android:id="@+id/timeview"
-        android:text="00:00"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnPlay"
-        android:layout_centerHorizontal="true"/>
+        android:layout_toRightOf="@id/chrono"
+        android:text="00:00" />
+
     <TextView
         android:id="@+id/timeview2"
-        android:text="00:00"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/simpleVideoView2"
-        android:layout_centerHorizontal="true"/>
-
-    <VideoView
-        android:id="@+id/simpleVideoView2"
-        android:layout_width="match_parent"
+        android:layout_toRightOf="@id/timeview"
+        android:text="00:00"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentRight="true"/>
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/idExoPlayerVIew2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/pilot"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        />
 
 </RelativeLayout>
+
+<!--    <VideoView-->
+<!--        android:id="@+id/simpleVideoView2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true" />-->
